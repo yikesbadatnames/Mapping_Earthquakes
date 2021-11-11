@@ -6,7 +6,7 @@ let map = L.map("mapid", {
     center: [
       40.7, -94.5
     ],
-    zoom: 8
+    zoom: 6
   });
 
 // We create the tile layer that wills be the background of our map.
@@ -73,4 +73,15 @@ cities.forEach(function(city){
     .addTo(map);
 });
 
+// Coordinates for each point to be used in the line.
+let line = [
+  [33.9416, -118.4085],
+  [37.6213, -122.3790],
+  [40.7899, -111.9791],
+  [47.4502, -122.3088]
+];
+
+L.polyline(line, {
+  color: "red"
+}).addTo(map);
 console.log(map);
