@@ -80,7 +80,14 @@ let line = [
   [40.7899, -111.9791],
   [47.4502, -122.3088]
 ];
-
+// Accessing the airport GeoJSON URL
+let airportData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/majorAirports.json";
+// Grabbing our GeoJSON data.
+d3.json(airportData).then(function(data) {
+  console.log(data);
+// Creating a GeoJSON layer with the retrieved data.
+L.geoJson(data).addTo(map);
+});
 L.polyline(line, {
   color: "red"
 }).addTo(map);
