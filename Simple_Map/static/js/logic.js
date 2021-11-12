@@ -81,7 +81,7 @@ let line = [
   [47.4502, -122.3088]
 ];
 // Accessing the airport GeoJSON URL
-let airportData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/majorAirports.json";
+let airportData = "https://raw.githubusercontent.com/yikesbadatnames/Mapping_Earthquakes/main/Simple_Map/resources/majorAirports.json";
 // Grabbing our GeoJSON data.
 d3.json(airportData).then(function(data) {
   console.log(data);
